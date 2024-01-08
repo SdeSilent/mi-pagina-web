@@ -1,4 +1,4 @@
-<style> .leche {
+.leche {
     color: white; 
                    background-color: brown; } 
 .carne { 
@@ -13,9 +13,3 @@
  .granos { 
     color: white; 
                     background-color: lightblue; }
-  </style> <ul> 
-  <li class="leche">Leche</li> 
-  <li class="carne">Pollo</li> 
-  <li class="frutas">Fresas</li> 
-  <li class="verduras">Espinacas</li> 
-  <li class="granos">Arroz</li> </ul>
