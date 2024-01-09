@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buscador de smartphones</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        .ui-autocomplete {
+            max-height: 200px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Buscador de smartphones</h1>
+
+<label for="marca">Marca:</label>
+<input id="marca" type="text" name="marca">
+
+<label for="precio">Precio:</label>
+<select id="precio" name="precio">
+    <option value="">Selecciona un rango de precios</option>
+    <option value="0-100">0-100</option>
+    <option value="100-200">100-200</option>
+    <option value="200-300">200-300</option>
+    <option value="300-400">300-400</option>
+    <option value="400-500">400-500</option>
+    <option value="500+">500+</option>
+</select>
+
+<button id="buscar">Buscar</button>
+
+<script>
+    $(function() {
+        var marcas = ["Samsung", "Apple", "Xiaomi", "Huawei", "Oppo", "Vivo", "Motorola", "Nokia", "OnePlus", "Google"];
+        $("#marca").autocomplete({
+            source: marcas
+        });
+
+        $("#buscar").click(function() {
+            var marca = $("#marca").val();
+            var precio = $("#precio").val();
+
+            if (marca === "" && precio === "") {
+                alert("Por favor, ingrese al menos una marca o seleccione un rango de precios.");
+            } else {
+                alert("Resultados de búsqueda para la marca " + marca + " y el rango de precios " + precio + ".");
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
