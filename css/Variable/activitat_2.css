@@ -1,0 +1,6 @@
+.cuadrado {
+    --lado: 20rem;
+    width: 10rem (--lado); 
+    height: 10rem (--lado);
+    background-color: #D95B43;
+}

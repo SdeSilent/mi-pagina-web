@@ -13,3 +13,6 @@
  .granos { 
     color: white; 
                     background-color: lightblue; }
+li{
+   max-width: 150px;
+}
