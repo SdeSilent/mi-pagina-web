@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eclipse Simulation</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f5f5f5;
+    }
+
+    .circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .sun {
+      background-color: #ffdd00;
+      transform: translate(-50%, -50%);
+    }
+
+    .moon {
+      background-color: #e3e3e3;
+      transform: translate(-50%, -50%) scale(0.5);
+      transition: transform 2s;
+    }
+
+    .moon-hover {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  </style>
+</head>
+<body>
+  <div class="sun circle"></div>
+  <div class="moon circle" onmouseover="this.classList.add('moon-hover')" onmouseout="this.classList.remove('moon-hover')"></div>
+</body>
+</html>

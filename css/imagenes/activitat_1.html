@@ -1,0 +1,77 @@
+
+Download
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat entre dos personas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+        }
+        article {
+            margin-bottom: 20px;
+        }
+        .avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .message {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .name {
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .date {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .message-text {
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <article>
+            <img class="avatar" src="https://www.example.com/avatar1.jpg" alt="Avatar de persona 1">
+            <div class="message">
+                <div class="name">Persona 1</div>
+                <time class="date" datetime="2023-03-14T12:00:00">Hoy a las 12:00</time>
+                <div class="message-text">
+                    Hola, ¿cómo estás?
+                </div>
+            </div>
+        </article>
+        <article>
+            <img class="avatar" src="https://www.example.com/avatar2.jpg" alt="Avatar de persona 2">
+            <div class="message">
+                <div class="name">Persona 2</div>
+                <time class="date" datetime="2023-03-14T12:01:00">Hoy a las 12:01</time>
+                <div class="message-text">
+                    Hola, estoy bien. ¿Y tú?
+                </div>
+            </div>
+        </article>
+    </section>
+</body>
+</html>

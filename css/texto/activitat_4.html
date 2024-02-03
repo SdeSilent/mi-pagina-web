@@ -1,0 +1,78 @@
+
+Download
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Playground</title>
+    <style>
+        @font-face {
+            font-family: 'Montserrat';
+            src: url('Montserrat-Regular.woff2') format('woff2'),
+                 url('Montserrat-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('PlayfairDisplay-Regular.woff2') format('woff2'),
+                 url('PlayfairDisplay-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Playfair Display', serif;
+            line-height: 1.6;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: normal;
+            color: #4a4a4a;
+            transition: color 0.3s, font-style 0.3s;
+        }
+
+        h1:hover {
+            color: blue;
+            font-style: italic;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: red;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4a4a4a;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Font Playground</h1>
+    <h3>Cabecera de ejemplo</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet sapien vel ipsum tempor porttitor. Aenean id velit interdum, sodales justo nec, vestibulum nisi. Sed venenatis sapien ac sapien bibendum, in faucibus elit fringilla. Sed consequat nunc vel massa malesuada, vel dapibus justo egestas. Nulla consequat elementum libero, nec sodales massa fermentum non. Sed in aliquam lacus, ac euismod ex. Pellentesque at sem tincidunt, iaculis lacus vel, egestas velit.</p>
+    <p>Nullam venenatis nulla metus, eget tincidunt ipsum fermentum a. Nam quis malesuada nibh. Nam id sollicitudin ipsum. Aliquam sit amet dapibus nunc. Aenean consectetur, mi a euismod vestibulum, mi ipsum tincidunt lorem, vel ultricies massa eros vel sapien. Nam vel libero vitae ipsum faucibus scelerisque ac sit amet tellus. Nulla sollicitudin, odio vel convallis elementum, nibh enim malesuada ex, nec rhoncus turpis mi id nisl. Nulla consequat cursus lectus, eget convallis nunc suscipit sit amet. Donec imperdiet tincidunt ullamcorper.</p>
+    <h3>Otra cabecera de ejemplo</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing

@@ -1,0 +1,32 @@
+html
+Download
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imagen en Radiografía</title>
+  <style>
+    .container {
+      display: inline-block;
+      position: relative;
+    }
+
+    .container img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .container:hover img {
+      filter: invert(100%);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://i.imgur.com/vJaPjqj.png" alt="Imagen de esqueleto">
+  </div>
+</body>
+</html>

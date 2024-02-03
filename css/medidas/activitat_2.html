@@ -1,0 +1,48 @@
+html
+Download
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efecto de escalera</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+        .paragraph {
+            margin-bottom: 20px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .paragraph:nth-child(odd) {
+            background-color: #e0e0e0;
+        }
+        .paragraph:nth-child(even) {
+            background-color: #d0d0d0;
+        }
+        .paragraph:nth-child(1) {
+            width: 100%;
+        }
+        .paragraph:nth-child(2) {
+            width: 75%;
+        }
+        .paragraph:nth-child(3) {
+            width: 50%;
+        }
+        .paragraph:nth-child(4) {
+            width: 25%;
+        }
+    </style>
+</head>
+<body>
+    <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+    <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+    <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+    <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+</body>
+</html>
