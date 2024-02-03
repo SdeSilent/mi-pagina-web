@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        :root {
+            --rectangle-height: 5rem;
+        }
+        #rectangle {
+            width: calc(2 * var(--rectangle-height));
+            height: var(--rectangle-height);
+            background-color: #000;
+        }
+        .title, a {
+            color: var(--rectangle-height);
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Title</h1>
+    <p>
+        <a href="#" class="link">Link 1</a>
+        <a href="#" class="link">Link 2</a>
+    </p>
+    <div id="rectangle"></div>
+</body>
+</html>

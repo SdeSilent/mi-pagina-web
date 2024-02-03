@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal Duplicado</title>
+  <style>
+    .modal {
+      display: inline-block;
+      padding: 1em;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 1rem;
+      text-align: center;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      transition: transform 0.2s ease-in;
+    }
+
+    .modal:hover {
+      transform: scale(2);
+    }
+
+    .modal-content {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content .modal-body {
+      background-color: #fff;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+  </style>
+</head>
+<body>
+  <button class="modal" onclick="openModal()">Abrir modal</button>
+
+  <div id="myModal" class="modal-content">
+    <div class="modal-body">
+      <h2>Modal duplicado</h2>
+      <p>Este modal se duplica en tamaño cuando el cursor se posiciona encima.</p>
+      <button onclick="closeModal()">Cerrar</button>
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById("myModal").style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == document.getElementById("myModal")) {
+        closeModal();
+      }
+    }
+  </script>
+</body>
+</html>

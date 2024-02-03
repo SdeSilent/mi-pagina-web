@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de error</title>
+    <style>
+        body {
+            background-color: #343a40;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .monster {
+            width: 300px;
+            height: 300px;
+            background-color: #f44336;
+            border: 10px solid #ff9800;
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .leg {
+            width: 50px;
+            height: 20px;
+            background-color: #f44336;
+            border-radius: 50% 0 0 50%;
+            position: absolute;
+        }
+        .leg::before {
+            content: "";
+            width: 20px;
+            height: 20px;
+            background-color: #f44336;
+            border-radius: 50%;
+            position: absolute;
+            left: -15px;
+            top: -15px;
+        }
+        .leg.left {
+            border-radius: 0 50% 50% 0;
+            transform: rotate(-45deg);
+            bottom: -80px;
+        }
+        .leg.right {
+            transform: rotate(45deg);
+            left: -80px;
+        }
+        .eye {
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .eye.left {
+            left: -80px;
+            top: -40px;
+        }
+        .eye.right {
+            left: 80px;
+            top: -40px;
+        }
+        .pupil {
+            width: 20px;
+            height: 20px;
+            background-color: #000;
+            border-radius: 50%;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+        .mouth {
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            border-radius: 50% 50% 0 0;
+            position: absolute;
+            top: 160px;
+            left: -50px;
+        }
+        .mouth::before {
+            content: "";
+            width: 100px;
+            height: 100px;
+            background-color: #f44336;
+            border-radius: 50% 50% 0 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="monster">
+        <div class="leg left"></div>
+        <div class="leg right"></div>
+        <div class="eye left">
+            <div class="pupil"></div>
+        </div>
+        <div class="eye right">
+            <div class="pupil"></div>
+        </div>
+        <div class="mouth"></div>
+    </div>
+</body>
+</html>

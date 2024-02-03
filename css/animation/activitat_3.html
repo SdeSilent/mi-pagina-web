@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie Banner</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .cookie-banner {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      animation: fadeIn 1s;
+    }
+
+    .cookie-banner button {
+      background-color: #f1c40f;
+      color: #333;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cookie-banner">
+    <p>Este sitio web utiliza cookies para mejorar la experiencia del usuario. Al continuar navegando, aceptas su uso.</p>
+    <button onclick="acceptCookies()">Aceptar</button>
+  </div>
+  <script>
+    function acceptCookies() {
+      document.querySelector('.cookie-banner').style.display = 'none';
+      localStorage.setItem('acceptedCookies', 'true');
+    }
+
+    if (!localStorage.getItem('acceptedCookies')) {
+      document.querySelector('.cookie-banner').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

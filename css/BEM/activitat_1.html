@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header con logo, navegador y formulario de búsqueda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: #f1f1f1;
+        }
+        .logo {
+            width: 100px;
+            height: 100px;
+            background-color: #000;
+            margin-right: 1rem;
+        }
+        .nav {
+            display: flex;
+            gap: 1rem;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #000;
+        }
+        .search-form {
+            display: flex;
+            gap: 1rem;
+        }
+        .search-form input[type="text"] {
+            width: 200px;
+            padding: 0.5rem;
+        }
+        .search-form button {
+            background-color: #000;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"></div>
+        <nav class="nav">
+            <a href="#">Inicio</a>
+            <a href="#">Productos</a>
+            <a href="#">Contacto</a>
+        </nav>
+        <form class="search-form">
+            <input type="text" placeholder="Buscar...">
+            <button type="submit">Buscar</button>
+        </form>
+    </header>
+    <main>
+        <!-- Aquí va el contenido principal de la página -->
+    </main>
+</body>
+</html>
