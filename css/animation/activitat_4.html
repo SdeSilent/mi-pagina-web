@@ -1,94 +1,31 @@
-html
-Download
-Copy code
+<!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Animated Clock</title>
+  <title>Document</title>
+</head>
+<body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eclipse Simulation</title>
   <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f5f5f5;
-    }
-
-    .clock {
-      width: 200px;
-      height: 200px;
+    .cuadrado {
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
-      border: 2px solid #000;
-      position: relative;
-    }
-
-    .hour-hand,
-    .minute-hand,
-    .second-hand {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform-origin: bottom;
-      transform: translate(-50%, 50%);
-      background-color: #000;
-    }
-
-    .hour-hand {
-      width: 10px;
-      height: 50px;
-      transform: rotate(0deg);
-      animation: hour-hand 3600s linear infinite;
-    }
-
-    .minute-hand {
-      width: 5px;
-      height: 70px;
-      transform: rotate(0deg);
-      animation: minute-hand 60s linear infinite;
-    }
-
-    .second-hand {
-      width: 2px;
-      height: 90px;
-      transform: rotate(0deg);
-      animation: second-hand 60s linear infinite;
-    }
-
-    @keyframes hour-hand {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-
-    @keyframes minute-hand {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-
-    @keyframes second-hand {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
     }
   </style>
 </head>
 <body>
-  <div class="clock">
-    <div class="hour-hand"></div>
-    <div class="minute-hand"></div>
-    <div class="second-hand"></div>
-  </div>
+  <div class="cuadrado"></div>
+  <div class="cuadrado" onmouseover="this.classList.add('cuadrado')" onmouseout="this.classList.remove('cuadrado')"></div>
+</body>
+</html>
 </body>
 </html>
