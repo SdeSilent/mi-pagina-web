@@ -1,31 +1,73 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eclipse Simulation</title>
-  <style>
-    .cuadrado {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      position: absolute;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reloj con Agujas</title>
+<div style="text-align: center;">
+<style>
+    .reloj {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border: 2px solid #000;
+        border-radius: 50%;
     }
-  </style>
+    .aguja {
+        position: absolute;
+        width: 2px;
+        height: 80px;
+        background-color: #000;
+        top: 50%;
+        left: 50%;
+        transform-origin: 50% 100%;
+    }
+    .hora {
+        transform: rotate(90deg);
+    }
+    .minuto {
+        transform: rotate(180deg);
+    }
+    .segundo {
+        width: 1px;
+        height: 90px;
+        background-color: red;
+        z-index: 1;
+    }
+</style>
 </head>
 <body>
-  <div class="cuadrado"></div>
-  <div class="cuadrado" onmouseover="this.classList.add('cuadrado')" onmouseout="this.classList.remove('cuadrado')"></div>
-</body>
-</html>
+
+<div class="reloj">
+    <div class="aguja hora" id="hora"></div>
+    <div class="aguja minuto" id="minuto"></div>
+    <div class="aguja segundo" id="segundo"></div>
+</div>
+
+<script>
+    function actualizarReloj() {
+        const ahora = new Date();
+        const horas = ahora.getHours() % 12;
+        const minutos = ahora.getMinutes();
+        const segundos = ahora.getSeconds();
+        
+        const agujaHora = document.getElementById('hora');
+        const agujaMinuto = document.getElementById('minuto');
+        const agujaSegundo = document.getElementById('segundo');
+
+        const anguloHora = horas * 30 + minutos * 0.5;
+        const anguloMinuto = minutos * 6 + segundos * 0.1;
+        const anguloSegundo = segundos * 6;
+
+        agujaHora.style.transform = `rotate(${anguloHora}deg)`;
+        agujaMinuto.style.transform = `rotate(${anguloMinuto}deg)`;
+        agujaSegundo.style.transform = `rotate(${anguloSegundo}deg)`;
+    }
+
+    setInterval(actualizarReloj, 1000);
+    actualizarReloj(); 
+</script>
+</div>
+
 </body>
 </html>
