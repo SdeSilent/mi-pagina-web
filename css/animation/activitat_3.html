@@ -1,46 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cookie Banner</title>
-<style>
-  /* Estilos del banner */
-  .cookie-banner {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #f2f2f2;
-    padding: 10px 20px;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie Banner</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
 
-  /* Estilos del botón de aceptar */
-  .accept-btn {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-</style>
+    .cookie-banner {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      animation: fadeIn 1s;
+    }
+
+    .cookie-banner button {
+      background-color: #f1c40f;
+      color: #333;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="cookie-banner">
+    <p>Este sitio web utiliza cookies para mejorar la experiencia del usuario. Al continuar navegando, aceptas su uso.</p>
+    <button onclick="acceptCookies()">Aceptar</button>
+  </div>
+  <script>
+    function acceptCookies() {
+      document.querySelector('.cookie-banner').style.display = 'none';
+      localStorage.setItem('acceptedCookies', 'true');
+    }
 
-<div class="cookie-banner">
-  <p>Este sitio web utiliza cookies para garantizar que obtengas la mejor experiencia en nuestro sitio web.</p>
-  <button class="accept-btn" onclick="acceptCookies()">Aceptar</button>
-</div>
-
-<script>
-  // Función para aceptar las cookies y ocultar el banner
-  function acceptCookies() {
-    document.querySelector('.cookie-banner').style.display = 'none';
-    // Aquí puedes agregar lógica para guardar la aceptación de cookies en el navegador o en el servidor
-  }
-</script>
-
+    if (!localStorage.getItem('acceptedCookies')) {
+      document.querySelector('.cookie-banner').style.display = 'block';
+    }
+  </script>
 </body>
 </html>
